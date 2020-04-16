@@ -2,6 +2,8 @@
 
 ## Coverage
 
+
+
 ### Block Ciphers
 
 ### Stream Cipher
@@ -21,3 +23,9 @@
 ### Factorization algorithm
 
 ### DLP-Discrete Logarithm Problem
+
+#### Shanks-Baby-step giant-step
+
+#### Pollard’s ρ algorithm
+
+#### Pohlig-Hellman algorithm
