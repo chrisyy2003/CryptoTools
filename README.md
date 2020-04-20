@@ -2,21 +2,21 @@
 
 ## Coverage
 
-
-
 ### Block Ciphers
 
 ### Stream Cipher
 
 ### Asymmetric Cryptography
 
-#### RSA Encryption
+- #### RSA Encryption
 
-#### Elgamal
+- #### Elgamal
 
-#### Ecc
+- #### Ecc
 
-#### Knapsack Cipher
+
+- #### Knapsack Cipher
+
 
 ## Algorithm
 
@@ -24,8 +24,10 @@
 
 ### DLP-Discrete Logarithm Problem
 
-#### Shanks-Baby-step giant-step
+- #### Shanks-Baby-step giant-step
 
-#### Pollard’s ρ algorithm
+- #### Pollard’s ρ algorithm
 
-#### Pohlig-Hellman algorithm
+- #### Pohlig-Hellman algorithm
+
+
