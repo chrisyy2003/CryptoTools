@@ -15,17 +15,14 @@ def int2bin(a, n):
     return res.tolist()
 
 # 二进制数组转整数，大端序
+
+
 def bin2int(a):
     return reduce(lambda x, y: x * 2 + y, a)
 
-def bin2bytes(a):
-    a = np.array(a, dtype=int).reshape(8, 8)
-    res = ''
-    for i in range(8):
-        res += hex(bin2int(a[i]))[2:]
-    return bytes.fromhex(res)
-
 # 循环左移off位
+
+
 def leftRotate(a, off):
     return a[off:] + a[:off]
 
@@ -229,6 +226,7 @@ def DES_enc(m, key):
 
     return long_to_bytes(bin2int(c))  # 块转10进制转字节
 
+
 def DES_dec(m, key):
     subkey = int(key.hex(), 16)
     m = int(m.hex(), 16)
@@ -244,8 +242,7 @@ def DES_dec(m, key):
 
     return long_to_bytes(bin2int(c))  # 块转10进制转字节
 
+
 if __name__ == "__main__":
     print(DES_dec(DES_enc(b'chrisyyy', b'12345678'), b'12345678'))
-
-
 
