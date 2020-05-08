@@ -6,9 +6,10 @@
 
 #### xor
 
-Hamming_distance
+- Hamming_distance
 
-Brute_by_step
+- Brute_by_step
+
 
 ### Block Ciphers
 
@@ -16,11 +17,11 @@ Brute_by_step
 
 ### Asymmetric Cryptography
 
-- #### RSA Encryption
+#### RSA Encryption
 
-- #### Elgamal
+#### Elgamal
 
-- #### Ecc
+#### Ecc
 
 
 - #### Knapsack Cipher
