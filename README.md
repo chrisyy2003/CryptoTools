@@ -2,6 +2,14 @@
 
 ## Coverage
 
+### ClassicalCryptography
+
+#### xor
+
+Hamming_distance
+
+Brute_by_step
+
 ### Block Ciphers
 
 ### Stream Cipher
