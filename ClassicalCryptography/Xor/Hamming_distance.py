@@ -74,7 +74,7 @@ for KEYSIZE, _ in normalized_distances:
         key = bytearray(keys * len(b), "utf-8")
         plaintext = bxor(b, key)
         print("size:" + "%-2d" % KEYSIZE, end='')
-        print("  key :", keys, "n")
+        print("  key :", keys)
         # s = bytes.decode(plaintext)
         # print(s)
     except Exception:
