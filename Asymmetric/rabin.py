@@ -1,15 +1,25 @@
-from Crypto.Util.number import long_to_bytes
-import libnum
+from Crypto.Util.number import *
+from Algorithm import tonelli_shanks
+from libnum import solve_crt
 
-p = 1
-q = 1
-c = ''
-b1 = pow(c, (p + 1) // 4, p)
-b2 = pow(c, (q + 1) // 4, q)
-ans = []
-ans.append(libnum.solve_crt([b1, b2], [p, q]))
-ans.append(libnum.solve_crt([-b1, b2], [p, q]))
-ans.append(libnum.solve_crt([b1, -b2], [p, q]))
-ans.append(libnum.solve_crt([-b1, -b2], [p, q]))
-for i in ans:
-    print(long_to_bytes(i))
+def Rabin(p, q, c):
+    t = tonelli_shanks(c, p)
+    qlist = [-t, t]
+    t = tonelli_shanks(c, q)
+    plist = [-t, t]
+    for i in qlist:
+        for j in plist:
+            print(long_to_bytes(solve_crt([i, j], [p, q])))
+
+
+p = getPrime(512)
+q = getPrime(512)
+e = 2
+n = p * q
+m = b'flag{this_is_flag}'
+c = pow(bytes_to_long(m), e, n)
+
+Rabin(p, q, c)
+
+
+
