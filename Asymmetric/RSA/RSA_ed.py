@@ -1,3 +1,5 @@
+from functools import reduce
+import hashlib
 import gmpy2 as gmpy
 from Crypto.Util.number import *
 from tqdm import tqdm
@@ -18,4 +20,4 @@ def RSA_ed(e, d, c):
                         n = p * i
                         print(long_to_bytes(pow(c, d, n)))
                         exit()
-RSA_ed(e,d,c)
+RSA_ed(e, d, c)

@@ -87,3 +87,6 @@ def tonelli_shanks(a, p):
         x = (x * gs) % p
         b = (b * g) % p
         r = m
+
+
+
