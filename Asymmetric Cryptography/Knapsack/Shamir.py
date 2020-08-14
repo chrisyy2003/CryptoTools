@@ -93,6 +93,24 @@ alist = []
 for i in range(n):
     eval("alist.append({})".format('a' + str(i)))
 
+# this is for ckeck ans
+# check = '00000010001000011000000000000000000100000000000000000000001000100001100010000000'
+# summ = 0
+# for i in range(len(check)):
+#     summ += int(check[i]) * alist[i]
+# if summ == target:
+#     print('solved!')
+
+# this is for test,it will gen test data randomly
+ans = [alist.index(i) for i in
+       random.sample(alist, random.randint(1, len(alist)))]
+target = 0
+for i in ans:
+    target += alist[i]
+print(target, ans)
+print(''.join(['1' if i in ans else '0' for i in range(n)]))
+
+t = target
 
 def shamir(elements, target):
     lent = len(elements)
@@ -181,6 +199,7 @@ def algorithm3(sl1, sr1, sl2, sr2, n, target):
     sr2m = sorted(sr2m, key=cmp_to_key(cmpfun))
     print('list sorted in ', time.time() - end)
 
+
     sol = []
     '''
     solution list
@@ -241,6 +260,4 @@ def algorithm3(sl1, sr1, sl2, sr2, n, target):
                     for i in (i, j, sl2_index, sr2_index):
                         ans += bin(i)[2:].rjust(n // 4, '0')
                     exit(ans)
-
-
-shamir(alist, target)
+shamir(alist, t)
